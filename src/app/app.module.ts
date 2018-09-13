@@ -10,6 +10,8 @@ import { WallComponent } from './wall/wall.component';
 import { ChatComponent } from './chat/chat.component';
 import { ActiveComponent } from './active/active.component';
 import { DiarieComponent } from './diarie/diarie.component';
+import { ImputLoginComponent } from './imput-login/imput-login.component';
+import { LoginAuthComponent } from './login-auth/login-auth.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { DiarieComponent } from './diarie/diarie.component';
     WallComponent,
     ChatComponent,
     ActiveComponent,
-    DiarieComponent
+    DiarieComponent,
+    ImputLoginComponent,
+    LoginAuthComponent
   ],
   imports: [
     BrowserModule
