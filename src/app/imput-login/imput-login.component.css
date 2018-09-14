@@ -1,0 +1,24 @@
+input{
+  justify-content: center;
+  width: 45%;
+  background-color: #27a9e17e;
+}
+
+span{
+  background-color: transparent;
+}
+
+button {
+  justify-content: center;
+  width: 45%;
+  border: none;
+  border-radius: 2rem;
+  background-color: #82CCD5;
+  color: #333333;
+}
+
+button:hover {
+  border: none;
+  background-color: rgb(176, 201, 204);
+  color: white;
+}

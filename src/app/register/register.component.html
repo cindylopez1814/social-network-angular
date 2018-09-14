@@ -1,3 +1,11 @@
-<p>
-  register works!
-</p>
+<h5 >Bienvenido, Registrate en la mejor app</h5>
+<button type="button" routerLink= '/login'>
+  <span>&times;</span>
+</button>
+<form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+  <label>Correo Electronico</label>
+  <input formControlName="emailRegister" type="email" placeholder="Email" />
+  <label for="login-pass" class="form-label">Contraseña</label>
+  <input formControlName="pass" type="password" placeholder="Contraseña" />
+  <button type="submit">REGISTRARME</button>
+</form>
