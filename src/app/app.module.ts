@@ -22,6 +22,10 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './auth.service';
 
+//material angular io
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+
 const appRoutes: Routes= [
   {
     path:'',
@@ -66,7 +70,9 @@ const appRoutes: Routes= [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSidenavModule,
+    MatIconModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

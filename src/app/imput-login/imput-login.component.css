@@ -2,23 +2,37 @@ input{
   justify-content: center;
   width: 45%;
   background-color: #27a9e17e;
-}
-
-span{
-  background-color: transparent;
-}
-
-button {
-  justify-content: center;
   width: 45%;
+  height: 40px;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 2%;
+}
+
+#startSesion {
+  justify-content: center;
   border: none;
   border-radius: 2rem;
   background-color: #82CCD5;
   color: #333333;
+  width: 45%;
+  height: 40px;
+  display: inline-block;
+  margin: 15px;
 }
 
 button:hover {
   border: none;
   background-color: rgb(176, 201, 204);
   color: white;
+}
+#registerButton{
+  background-color: inherit;
+  color:#82CCD5;
+  display: inline-block;
+  border: none;
+}
+#notReg{
+  display: inline-block;
+  color: #6b6868;
 }
