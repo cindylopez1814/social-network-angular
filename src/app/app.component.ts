@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
 
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'social-network-angular';
+  @Input() msj:string;   //decorador
+
   constructor(private router: Router, private authService: AuthService){
   }
 }
