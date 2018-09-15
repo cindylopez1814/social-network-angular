@@ -7,4 +7,10 @@ section{
 img{
   margin-top: 7%;
   width: 14%;
+  margin-bottom: 20px;
+}
+
+hr{
+  width: 600px;
+  color: #8a8888;
 }
