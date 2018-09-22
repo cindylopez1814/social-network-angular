@@ -1,0 +1,45 @@
+i{
+  border: inherit;
+  background-color: inherit;
+  color: gray;
+}
+i:hover{
+  border: inherit;
+  background-color: inherit;
+  color: rgb(80, 79, 79);
+}
+button{
+  border: inherit;
+  background-color: inherit;
+  color: gray;
+}
+button:hover{
+  border: inherit;
+  background-color: inherit;
+  color: rgb(80, 79, 79);
+}
+div{
+  margin: 2px;
+}
+#sideBar{
+  width:30%;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+}
+#back{
+  background-image: url('../../assets/img/school-background.png');
+  height: 100vh;
+  background-size: contain;
+  background-position: center;
+  }
+#divBlue{
+  background-color: #27a9e1ad;
+  z-index:0;
+  position: absolute;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  width: 70%;
+  top: 0px;
+  left: 30%;
+}

@@ -25,6 +25,7 @@ import { AngularFireDatabaseModule } from "@angular/fire/database";
 //material angular io
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 
 const appRoutes: Routes= [
   {
@@ -40,13 +41,30 @@ const appRoutes: Routes= [
     component: LoginComponent
   },
   {
-    path: 'diarioMural',
+    path: 'muro',
     component: WallComponent
   },
   {
     path: 'home',
     component: HomePageComponent
-  }
+  },
+  {
+    path: 'consejoCurso',
+    component: ActiveComponent
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
+  },
+  {
+    path: 'perfil',
+    component: ProfileComponent
+  },
+  {
+    path: 'actividades',
+    component: DiarieComponent
+  },
+
 ]
 
 @NgModule({
@@ -74,6 +92,7 @@ const appRoutes: Routes= [
     MatSidenavModule,
     MatIconModule,
     AngularFireDatabaseModule,
+    MatCardModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
