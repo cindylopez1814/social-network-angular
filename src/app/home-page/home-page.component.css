@@ -41,18 +41,3 @@ nav {
   right: 0px;
   box-shadow: 0px 2px 14px -3px rgba(105, 105, 105, 1);
 }
-p{
-  color: white;
-}
-#card{
-  z-index: -1;
-  position: absolute;
-  font-family: 'Open Sans', sans-serif;
-  width: 50%;
-  left: 40%;
-  height: 30vh;
-  top: 20vh;
-  border-top: 20%;
-  border-top-color: #27a9e1ad;
-  background-color: white;
-}
