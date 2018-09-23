@@ -46,6 +46,22 @@ const appRoutes: Routes= [
   {
     path: 'home',
     component: HomePageComponent
+  },
+  {
+    path: 'Perfil',
+    component: ProfileComponent
+  },
+  {
+    path: 'Actividades',
+    component: ActiveComponent
+  },
+  {
+    path: 'Consejo_curso',
+    component: DiarieComponent
+  },
+  {
+    path: 'Chat',
+    component: ChatComponent
   }
 ]
 
