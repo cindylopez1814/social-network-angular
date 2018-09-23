@@ -28,4 +28,19 @@ export class HomePageComponent implements OnInit {
           });
       });
   }
+  wall(){
+    console.log('funciona');
+  }
+  activities(){
+    console.log('funciona');
+  }
+  advice(){
+    console.log('funciona');
+  }
+  chat(){
+    console.log('funciona');
+  }
+  profile(){
+    console.log('funciona');
+  }
 }

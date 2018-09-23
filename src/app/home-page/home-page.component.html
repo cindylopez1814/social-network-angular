@@ -1,21 +1,29 @@
-
 <!--link icon for svg-->
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
+  crossorigin="anonymous"></script>
+<section id="sideBar">
+  <i class="fas fa-chalkboard" id="sideBar" (click)='wall()'></i>
+  <button type="button" class="sideBar" (click)='wall()'> DIARIO MURAL</button>
+  <br>
+  <i class="fas fa-list-ul" id="sideBar" (click)='activities()'></i>
+  <button type="button" class="sideBar" (click)='activities()'> ACTIVIDADES</button>
+  <br>
+  <i class="fas fa-users" id="sideBar" (click)='advice()'></i>
+  <button type="button" class="sideBar" (click)='advice()'> CONSEJO DE CURSO</button>
+  <br>
+  <i class="fas fa-comments" id="sideBar" (click)='chat()'></i>
+  <button type="button" class="sideBar" (click)='chat()'> CHAT</button>
+  <br>
+  <i class="fas fa-user-graduate" id="sideBar" (click)='profile()'></i>
+  <button type="button" class="sideBar" (click)='profile()'> PERFIL</button>
+  <br>
+  <i class="fas fa-arrow-circle-left" id="sideBar" (click)='onLogout()'></i>
+  <button type="button" (click)="onLogout()" class="sideBar"> LOGOUT</button>
+</section>
 
-<i class="fas fa-users"></i>
-  <button type="button" class="sideBar">DIARIO MURAL</button>
-<br>
-<i class="far fa-star"></i>
-  <button type="button" class="sideBar">ACTIVIDADES</button>
-  <br>
-  <i class="fas fa-user-chart"></i>
-  <button type="button" class="sideBar">CONSEJO DE CURSO</button>
-  <br>
-  <i class="far fa-comments"></i>
-  <button type="button" class="sideBar">CHAT</button>
-  <br>
-  <i class="fas fa-user-graduate"></i>
-  <button type="button" class="sideBar">PERFIL</button>
-  <br>
-  <i class="fas fa-arrow-circle-left"></i>
-  <button type="button" (click)="onLogout()" class="sideBar">Logout</button>
+<section id="back">
+  <div>
+    
+  </div>
+</section>
+<div id="divBlue"></div>
