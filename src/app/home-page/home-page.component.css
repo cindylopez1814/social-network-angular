@@ -18,34 +18,30 @@ button:hover{
   background-color: inherit;
   color: rgb(80, 79, 79);
 }
-div{
-  margin: 2px;
-}
-#sideBar{
+
+mat-sidenav-container{
   width:30%;
   height: 100vh;
   background-color: white;
   position: fixed;
 }
-#back{
+section{
   background-image: url('../../assets/img/school-background.png');
   height: 100vh;
   background-size: contain;
   background-position: center;
+  position: fixed;
   }
-#divBlue{
-  background-color: #27a9e1ad;
-  z-index:0;
-  position: absolute;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  width: 70%;
-  top: 0px;
-  left: 30%;
-  height: 10vh;
+nav {
+  width: 75%;
+  height: 7vh;
+  background-color: #82ccd5;
+  z-index: 2;
+  position: fixed;
+  right: 0px;
+  box-shadow: 0px 2px 14px -3px rgba(105, 105, 105, 1);
 }
 p{
-  font-family: 'Open Sans', sans-serif;
   color: white;
 }
 #card{
