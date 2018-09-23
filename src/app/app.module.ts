@@ -23,11 +23,17 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './auth.service';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
 
 // material angular io
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import { ImputPostComponent } from './imput-post/imput-post.component';
+import { ImputChatComponent } from './imput-chat/imput-chat.component';
 
 const appRoutes: Routes = [
   {
@@ -80,7 +86,9 @@ const appRoutes: Routes = [
     ActiveComponent,
     DiarieComponent,
     ImputLoginComponent,
-    LoginAuthComponent
+    LoginAuthComponent,
+    ImputPostComponent,
+    ImputChatComponent
   ],
   imports: [
     BrowserModule,
@@ -94,6 +102,10 @@ const appRoutes: Routes = [
     MatIconModule,
     AngularFireDatabaseModule,
     MatCardModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireFunctionsModule,
+    AngularFireMessagingModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

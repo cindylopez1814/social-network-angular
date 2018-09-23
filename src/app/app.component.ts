@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'social-network-angular';
-  @Input() msj:string;   //decorador
+  @Input() msj: string;   // decorador
 
-  constructor(private router: Router, private authService: AuthService){
+  constructor(private router: Router, private authService: AuthService) {
   }
 }
