@@ -30,6 +30,7 @@ section{
   height: 100vh;
   background-size: contain;
   background-position: center;
+  position: fixed;
   z-index: -1;
   }
 
@@ -48,19 +49,4 @@ nav {
 img{
   height: 7vh;
   margin: 1%;
-}
-p{
-  color: white;
-}
-#card{
-  z-index: -1;
-  position: absolute;
-  font-family: 'Open Sans', sans-serif;
-  width: 50%;
-  left: 40%;
-  height: 30vh;
-  top: 20vh;
-  border-top: 20%;
-  border-top-color: #27a9e1ad;
-  background-color: white;
 }
