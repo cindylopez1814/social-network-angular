@@ -1,14 +1,12 @@
 nav {
   width: 75%;
-  height: 7vh;
+  height: 10vh;
   background-color: #82ccd5;
   z-index: 2;
   position: fixed;
   right: 0px;
   box-shadow: 0px 2px 14px -3px rgba(105, 105, 105, 1);
-  color: white;
   text-align: center;
-  text-emphasis: A;
 }
 mat-card{
   background-color: white;
