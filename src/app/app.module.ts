@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 // componentes creados
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
@@ -21,14 +22,16 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './auth.service';
-import { AngularFireDatabaseModule } from "@angular/fire/database";
-//material angular io
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+// material angular io
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 
-const appRoutes: Routes= [
+const appRoutes: Routes = [
   {
-    path:'',
+    path: '',
     component: LoginComponent
   },
   {
@@ -63,7 +66,7 @@ const appRoutes: Routes= [
     path: 'Chat',
     component: ChatComponent
   }
-]
+];
 
 @NgModule({
   declarations: [
@@ -90,6 +93,7 @@ const appRoutes: Routes= [
     MatSidenavModule,
     MatIconModule,
     AngularFireDatabaseModule,
+    MatCardModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
