@@ -44,19 +44,15 @@ nav {
 p{
   color: white;
 }
-
-@media (min-width: 576px) {
-
-}
-
-@media (min-width: 768px) {
-
-}
-
-@media (min-width: 992px) {
-
-}
-
-@media (min-width: 1200px) {
-
+#card{
+  z-index: -1;
+  position: absolute;
+  font-family: 'Open Sans', sans-serif;
+  width: 50%;
+  left: 40%;
+  height: 30vh;
+  top: 20vh;
+  border-top: 20%;
+  border-top-color: #27a9e1ad;
+  background-color: white;
 }
