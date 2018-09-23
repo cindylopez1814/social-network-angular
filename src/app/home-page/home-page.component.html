@@ -2,26 +2,28 @@
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
   crossorigin="anonymous"></script>
 <section id="sideBar">
-  <i class="fas fa-chalkboard" id="sideBar" (click)='wall()'></i>
-  <button type="button" class="sideBar" (click)='wall()'> DIARIO MURAL</button>
+  <i class="fas fa-chalkboard" id="sideBar" (click)='wall()' routerLink= '/wall'></i>
+  <button type="button" class="sideBar" (click)='wall()' routerLink= '/wall'> DIARIO MURAL</button>
   <br>
-  <i class="fas fa-list-ul" id="sideBar" (click)='activities()'></i>
-  <button type="button" class="sideBar" (click)='activities()'> ACTIVIDADES</button>
+  <i class="fas fa-list-ul" id="sideBar" (click)='activities()' routerLink= '/actividades'></i>
+  <button type="button" class="sideBar" (click)='activities()' routerLink= '/actividades'> ACTIVIDADES</button>
   <br>
-  <i class="fas fa-users" id="sideBar" (click)='advice()'></i>
-  <button type="button" class="sideBar" (click)='advice()'> CONSEJO DE CURSO</button>
+  <i class="fas fa-users" id="sideBar" (click)='advice()' routerLink= '/consejoCurso'></i>
+  <button type="button" class="sideBar" (click)='advice()' routerLink= '/consejoCurso'> CONSEJO DE CURSO</button>
   <br>
-  <i class="fas fa-comments" id="sideBar" (click)='chat()'></i>
-  <button type="button" class="sideBar" (click)='chat()'> CHAT</button>
+  <i class="fas fa-comments" id="sideBar" (click)='chat()' routerLink= '/chat'></i>
+  <button type="button" class="sideBar" (click)='chat()' routerLink= '/chat'> CHAT</button>
   <br>
-  <i class="fas fa-user-graduate" id="sideBar" (click)='profile()'></i>
-  <button type="button" class="sideBar" (click)='profile()'> PERFIL</button>
+  <i class="fas fa-user-graduate" id="sideBar" (click)='profile()' routerLink= '/profile'></i>
+  <button type="button" class="sideBar" (click)='profile()' routerLink= '/profile'> PERFIL</button>
   <br>
   <i class="fas fa-arrow-circle-left" id="sideBar" (click)='onLogout()'></i>
   <button type="button" (click)="onLogout()" class="sideBar"> LOGOUT</button>
 </section>
 
 <section id="back">
-    <mat-card>Simple card</mat-card>
+    <mat-card id="">
+
+    </mat-card>
 </section>
 <div id="divBlue"></div>

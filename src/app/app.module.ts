@@ -41,7 +41,7 @@ const appRoutes: Routes= [
     component: LoginComponent
   },
   {
-    path: 'muro',
+    path: 'wall',
     component: WallComponent
   },
   {
@@ -57,7 +57,7 @@ const appRoutes: Routes= [
     component: ChatComponent
   },
   {
-    path: 'perfil',
+    path: 'profile',
     component: ProfileComponent
   },
   {

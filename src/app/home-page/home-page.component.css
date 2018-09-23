@@ -48,7 +48,7 @@ p{
   font-family: 'Open Sans', sans-serif;
   color: white;
 }
-mat-card{
+#card{
   z-index: -1;
   position: absolute;
   font-family: 'Open Sans', sans-serif;
@@ -58,4 +58,5 @@ mat-card{
   top: 20vh;
   border-top: 20%;
   border-top-color: #27a9e1ad;
+  background-color: white;
 }

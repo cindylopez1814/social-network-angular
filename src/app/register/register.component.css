@@ -1,0 +1,33 @@
+form{
+  text-align: center;
+}
+h5{
+  text-align: center;
+  margin-top: 20%;
+  color: #27a9e1ad;
+}
+input{
+  justify-content: center;
+  width: 45%;
+  background-color: #27a9e17e;
+  width: 20%;
+  height: 40px;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 2%;
+  
+}
+button{
+  color: white;
+  border: inherit;
+  width: 10%;
+  height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 2%;
+  background-color: #27a9e1ad;
+}
+label{
+  color: rgb(80, 79, 79);
+  text-align: right;
+}
