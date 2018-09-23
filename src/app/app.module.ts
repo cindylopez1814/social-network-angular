@@ -43,11 +43,7 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
-<<<<<<< HEAD
-    path: 'wall',
-=======
     path: 'diarioMural',
->>>>>>> upstream/master
     component: WallComponent
   },
   {
@@ -59,13 +55,8 @@ const appRoutes: Routes = [
     component: ProfileComponent
   },
   {
-<<<<<<< HEAD
-    path: 'profile',
-    component: ProfileComponent
-=======
     path: 'Actividades',
     component: ActiveComponent
->>>>>>> upstream/master
   },
   {
     path: 'Consejo_curso',
