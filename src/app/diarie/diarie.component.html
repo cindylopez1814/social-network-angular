@@ -7,7 +7,7 @@
   <mat-card>
     <app-imput-post></app-imput-post>
   </mat-card>
-  
+
   <mat-card *ngFor="let post of post">
     {{post.name}} - {{post.id}}
     <div (click)="remove(item)">
@@ -15,8 +15,7 @@
     </div>
     <div (click)="edit(item)">
       <i class="fas fa-marker"></i>
-      <button (click)='agregarPostEditado()'> ok </button>
     </div>
-      <i class="fas fa-heartbeat"></i>
+    <i class="fas fa-heartbeat"></i>
   </mat-card>
 </section>
