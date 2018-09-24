@@ -13,9 +13,9 @@ nav {
 mat-card{
   background-color: white;
   z-index: 2;
-  position: absolute;
-  margin-top: 10%;
   width: 55%;
-  height: 30vh;
-  right: 10%;
+  height: 15vh;
+  right: 0;
+  margin-top: 2%;
+  top: 30px;
 }

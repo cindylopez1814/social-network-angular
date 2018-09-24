@@ -11,17 +11,16 @@ import { DataService } from '../data.service';
 })
 export class ImputPostComponent implements OnInit {
   post: any = {
-    name: ''
+    message: ''
   };
 
   // tslint:disable-next-line:max-line-length
   constructor( private formBuilder: FormBuilder, private authService: AuthService, private dataBase: AngularFireDatabase, private dataService: DataService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   agregar() {
     this.dataService.addPost(this.post);
-    this.post.name = '';
+    this.post.message = '';
   }
 }

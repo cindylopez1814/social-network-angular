@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { post } from 'selenium-webdriver/http';
 
 export interface Post {
-  post: string;
+  message: string;
 }
 
 @Injectable({
