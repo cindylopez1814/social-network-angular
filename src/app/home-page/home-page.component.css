@@ -24,19 +24,11 @@ mat-sidenav-container{
   height: 100vh;
   background-color: white;
   position: fixed;
+  margin-top: -5%;
 }
-section{
-  background-image: url('../../assets/img/school-background.png');
-  height: 100vh;
-  background-size: contain;
-  background-position: center;
-  position: fixed;
-  z-index: -1;
-  }
-
 nav {
   width: 75%;
-  height: 9vh;
+  height: 10vh;
   background-color: #82ccd5;
   z-index: 2;
   position: fixed;
@@ -45,8 +37,10 @@ nav {
   text-align: center;
   box-shadow: 0px 2px 14px -3px rgba(105, 105, 105, 1);
 }
-
 img{
-  height: 7vh;
-  margin: 1%;
+  height: 17vh;
+  text-align: center;
+  margin-left: 26%;
+  margin-top: 12%;
+  opacity: 0.5;
 }

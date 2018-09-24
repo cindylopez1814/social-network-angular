@@ -7,16 +7,42 @@ nav {
   right: 0px;
   top: 0;
   box-shadow: 0px 2px 14px -3px rgba(105, 105, 105, 1);
-  color: white;
   text-align: center;
-  text-emphasis: A;
 }
+
 mat-card{
   background-color: white;
-  z-index: 2;
-  position: absolute;
-  margin-top: 10%;
   width: 55%;
-  height: 30vh;
-  right: 10%;
+  height: 40vh;
+  display: block;
+  margin-left: 32%;
+  margin-top: 5%;
+  padding-top: 5%;
+}
+main{
+  background-color: #82ccd5;
+  padding: 4%;
+  width: 90%;
+  margin-bottom: 4%;
+  display: block;
+}
+p{
+  color: rgb(80, 79, 79);
+  display: block;
+}
+img{
+  width: 6vw;
+  height: 13vh;
+  margin-left: 50%;
+  display: block;
+}
+section{
+  background-image: url('../../assets/img/school-background.png');
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+}
+em{
+  display: block;
+  color: #82ccd5;
 }
