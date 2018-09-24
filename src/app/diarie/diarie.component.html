@@ -4,8 +4,12 @@
   <h4>DIARIO MURAL</h4>
 </nav>
 <section>
+  <mat-card>
+    <app-imput-post></app-imput-post>
+  </mat-card>
+
   <mat-card *ngFor="let post of post">
-    {{post.post}} - {{post.id}}
+    {{post.name}} - {{post.id}}
     <div (click)="remove(item)">
       <i class="fas fa-trash-alt"></i>
     </div>

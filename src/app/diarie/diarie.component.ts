@@ -15,14 +15,14 @@ import { DataService } from '../data.service';
 export class DiarieComponent implements OnInit {
   post: any;
   editPost: any = {
-    name: ''
+    message: ''
   };
 
   // tslint:disable-next-line:max-line-length
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private database: AngularFireDatabase, private dataservice: DataService) {
     this.dataservice.getPost().subscribe(item => {
       this.post = item;
-      console.log(this.post);
+      console.log(item);
     });
   }
 
@@ -30,7 +30,7 @@ export class DiarieComponent implements OnInit {
   }
 
   remove(item) {
-    console.log(item.post);
+    this.dataservice.deletePost(item);
   }
 
   edit(item) {

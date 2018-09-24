@@ -6,7 +6,11 @@ import { map } from 'rxjs/operators';
 import { post } from 'selenium-webdriver/http';
 
 export interface Post {
-  post: string;
+  message: string;
+}
+
+export interface Chat {
+  msm: string;
 }
 
 @Injectable({
@@ -18,6 +22,10 @@ export class DataService {
   post$: Observable<Post[]>;
   private postDoc: AngularFirestoreDocument<Post>;
 
+  private chatCollection: AngularFirestoreCollection<Chat>;
+  chat$: Observable<Chat[]>;
+  private chatDoc: AngularFirestoreDocument<Chat>;
+
   constructor(private afs: AngularFirestore) {
     this.postCollection = afs.collection<Post>('post');
     this.post$ = this.postCollection.snapshotChanges().pipe(
@@ -25,6 +33,15 @@ export class DataService {
         const data = a.payload.doc.data() as Post;
         const id = a.payload.doc.id;
         return { id, ...data };
+      }))
+    );
+
+    this.chatCollection = afs.collection<Chat>('chat');
+    this.chat$ = this.chatCollection.snapshotChanges().pipe(
+      map(index => index.map(i => {
+        const dataChat = i.payload.doc.data() as Chat;
+        const id = i.payload.doc.id;
+        return {id, ...dataChat};
       }))
     );
   }
@@ -45,6 +62,14 @@ export class DataService {
   editPost(item) {
     this.postDoc = this.afs.doc<Post>(`post/${item.id}`);
     this.postDoc.update(item);
+  }
+
+  getChat() {
+    return this.chat$;
+  }
+
+  addChat(item: Chat) {
+    this.chatCollection.add(item);
   }
 }
 

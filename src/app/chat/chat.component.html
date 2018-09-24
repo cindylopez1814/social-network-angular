@@ -1,5 +1,23 @@
-<div>
-    <p>{{msj}}</p>
-</div>
-
-<app-imput-chat></app-imput-chat>
+<app-home-page></app-home-page>
+<nav>
+  <h4>CHAT</h4>
+</nav>
+<section>
+  <div class="container">  
+    <div class="top_menu">
+        <div class="avatar-pic"></div>
+        <div class="title">Usuaio</div>
+    </div>
+    <!-- Contenedor Mensajes -->
+    <div class="messagesContainer">
+        <div class="message-data">Usuario</div>
+        <div class="message" *ngFor="let chat of chat">
+            {{chat.msn}}
+        </div>
+    </div>
+    <!-- Area de envio -->
+    <div class="bottom">  
+        <app-imput-chat></app-imput-chat>
+    </div>
+  </div>
+</section>

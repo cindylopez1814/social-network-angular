@@ -1,3 +1,8 @@
-<p>
-  imput-chat works!
-</p>
+<form (ngSubmit)="send()">
+    <textarea type="text" placeholder="..." name="name" [(ngModel)]="chat.msn"></textarea>
+    <button type="submit">
+      <i class="far fa-paper-plane"></i>
+    </button>
+  </form>
+
+
