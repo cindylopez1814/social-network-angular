@@ -19,7 +19,7 @@ button:hover{
   color: rgb(80, 79, 79);
 }
 
-mat-sidenav-container{
+mat-sidenav-container {
   width:25%;
   height: 100vh;
   background-color: white;
