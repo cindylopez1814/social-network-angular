@@ -19,10 +19,19 @@ mat-card{
   margin-top: 5%;
   padding-top: 5%;
 }
-
 section{
   background-image: url('../../assets/img/school-background.png');
+  width: 100%;
   background-size: contain;
   background-position: center;
-  height: 100%;
+}
+button{
+  color: white;
+  border: inherit;
+  width: 15%;
+  height: 30px;
+  display: inline-block;
+  margin-left: 2%;
+  border-radius: 2%;
+  background-color: #27a9e1ad;
 }
