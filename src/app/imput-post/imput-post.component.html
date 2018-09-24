@@ -1,2 +1,4 @@
-<p>
-</p>
+<form (ngSubmit)="agregar()">
+  <textarea type="text" placeholder="Escribe tu mensaje" name="name" [(ngModel)]="post.name"></textarea>
+  <button type="submit">Publicar</button>
+</form>

@@ -4,9 +4,16 @@
   <p>Consejo de curso</p>
 </nav>
 
-<app-imput-post></app-imput-post>
-
-<mat-card>
+<mat-card *ngFor="let post of post">
+    {{post.post}} - {{post.id}}
+    <div (click)="remove(item)">
+      <i class="fas fa-trash-alt"></i>
+    </div>
+    <div (click)="edit(item)">
+      <i class="fas fa-marker"></i>
+      <button (clicl)='agregarPostEditado()'> ok </button>
+    </div>
+      <i class="fas fa-heartbeat"></i>
 
 </mat-card>
 

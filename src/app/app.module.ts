@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 // componentes creados
@@ -27,6 +27,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
 import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { DataService } from './data.service';
 
 // material angular io
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -50,7 +51,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'diarioMural',
-    component: WallComponent
+    component: DiarieComponent
   },
   {
     path: 'home',
@@ -66,7 +67,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'Consejo_curso',
-    component: DiarieComponent
+    component: WallComponent
   },
   {
     path: 'Chat',
@@ -97,6 +98,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     ReactiveFormsModule,
+    FormsModule,
     MatSnackBarModule,
     MatSidenavModule,
     MatIconModule,
@@ -107,7 +109,7 @@ const appRoutes: Routes = [
     AngularFireFunctionsModule,
     AngularFireMessagingModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
