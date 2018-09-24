@@ -23,3 +23,33 @@ section{
   background-position: center;
   height: 100vh;
 }
+img{
+  border-radius: 50%;
+  width: 13vw;
+  height: 20vh;
+  margin-left: 56%;
+  margin-top: 10%;
+}
+a{
+  color: white;
+  background-color: #82ccd5;
+  display: block;
+  margin-left: 25%;
+}
+input{
+  background-color: #82ccd5;
+  display: inline-block;
+  margin-left: 25%;
+  width: 25%;
+  height: 5%;
+}
+p{
+  display: inline-block;
+  margin-left: 25%;
+}
+div{
+  background-color: white;
+  width: 45%;
+  height: 30%;
+  margin-left: 14%;
+}
