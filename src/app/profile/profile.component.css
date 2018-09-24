@@ -7,7 +7,7 @@ nav {
   right: 0px;
   box-shadow: 0px 2px 14px -3px rgba(105, 105, 105, 1);
   text-align: center;
-  margin-top: -5%;
+  margin-top: -8%;
 }
 mat-card{
   background-color: white;
@@ -26,7 +26,7 @@ section{
 }
 img{
   border-radius: 50%;
-  width: 13vw;
+  width: 16vw;
   height: 20vh;
   margin-left: 56%;
   margin-top: 10%;
@@ -52,5 +52,5 @@ div{
   background-color: white;
   width: 45%;
   height: 30%;
-  margin-left: 14%;
+  margin-left: 40%;
 }

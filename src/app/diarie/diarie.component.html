@@ -1,5 +1,4 @@
 <app-home-page></app-home-page>
-
 <nav>
   <h4>DIARIO MURAL</h4>
 </nav>
@@ -7,15 +6,14 @@
   <mat-card>
     <app-imput-post></app-imput-post>
   </mat-card>
-
+  
   <mat-card *ngFor="let post of post">
-    {{post.name}} - {{post.id}}
-    <div (click)="remove(item)">
-      <i class="fas fa-trash-alt"></i>
-    </div>
-    <div (click)="edit(item)">
-      <i class="fas fa-marker"></i>
-    </div>
-    <i class="fas fa-heartbeat"></i>
+    <h4>{{post.name}}</h4> 
+    <div>
+      <i (click)="remove(item)" class="fas fa-trash-alt"></i>
+      <i (click)="edit(item)" class="fas fa-marker"></i>
+      <!-- <button (click)='agregarPostEditado()'> ok </button> -->
+      <i class="fas fa-star"></i>
+    </div>  
   </mat-card>
 </section>
