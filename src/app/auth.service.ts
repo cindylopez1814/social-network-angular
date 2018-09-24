@@ -8,36 +8,36 @@ import * as firebase from 'firebase';
   providedIn: 'root'
 })
 export class AuthService {
-  user:Observable<firebase.User>
-  constructor(private firebaseAuth:AngularFireAuth) { 
+  user: Observable<firebase.User>;
+  constructor(private firebaseAuth: AngularFireAuth) {
   }
 
-  signUp(email:string, password:string) {
+  signUp(email: string, password: string) {
     return this.firebaseAuth
     .auth
-    .createUserWithEmailAndPassword(email, password)
+    .createUserWithEmailAndPassword(email, password);
   }
 
-  login(email:string, password:string){
+  login(email: string, password: string) {
     return this.firebaseAuth
     .auth
     .signInWithEmailAndPassword(email, password);
   }
 
-  logOut(){
+  logOut() {
     return this.firebaseAuth.auth
-    .signOut()
+    .signOut();
   }
 
-  loginGoogle(){
-    return  new Promise<any>((resolve, reject)=>{
-      let provider = new firebase.auth.GoogleAuthProvider();
+  loginGoogle() {
+    return  new Promise<any>((resolve, reject) => {
+      const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope('profile');
       provider.addScope('email');
       this.firebaseAuth.auth
       .signInWithPopup(provider)
       .then(response => {
-        resolve (response)
+        resolve (response);
       }, err => {
         console.log(err);
         reject(err);
@@ -45,9 +45,9 @@ export class AuthService {
     });
   }
 
-  loginFacebook(){
+  loginFacebook() {
     return new Promise<any>((resolve, reject) => {
-      let provider = new firebase.auth.FacebookAuthProvider();
+      const provider = new firebase.auth.FacebookAuthProvider();
       this.firebaseAuth.auth
       .signInWithPopup(provider)
       .then(response => {
@@ -55,7 +55,7 @@ export class AuthService {
       }, err => {
         console.log(err);
         reject(err);
-      })
-    })
+      });
+    });
   }
 }

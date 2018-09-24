@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
 export class ImputLoginComponent implements OnInit {
   authForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private router: Router) { 
-    this.creatorAuthForm()
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private router: Router) {
+    this.creatorAuthForm();
   }
 
   ngOnInit() {
@@ -24,7 +24,7 @@ export class ImputLoginComponent implements OnInit {
       email: ['', Validators.compose([Validators.required, Validators.email])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     });
-  } 
+  }
 
   onLogin() {
     this.authService.login(this.authForm.value.email, this.authForm.value.password)

@@ -25,3 +25,17 @@
     <img src="../../assets/img/prueba.jpg" alt="" srcset="">
   </mat-card>
 </section>
+
+<mat-card *ngFor="let post of post">
+    {{post.post}} - {{post.id}}
+    <div (click)="remove(item)">
+      <i class="fas fa-trash-alt"></i>
+    </div>
+    <div (click)="edit(item)">
+      <i class="fas fa-marker"></i>
+      <button (clicl)='agregarPostEditado()'> ok </button>
+    </div>
+      <i class="fas fa-heartbeat"></i>
+
+</mat-card>
+
