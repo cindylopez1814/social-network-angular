@@ -1,0 +1,25 @@
+nav {
+  width: 75%;
+  height: 10vh;
+  background-color: #82ccd5;
+  z-index: 2;
+  position: fixed;
+  right: 0px;
+  box-shadow: 0px 2px 14px -3px rgba(105, 105, 105, 1);
+  text-align: center;
+}
+mat-card{
+  background-color: white;
+  width: 55%;
+  height: 40vh;
+  display: block;
+  margin-left: 32%;
+  margin-top: 5%;
+  padding-top: 5%;
+}
+section{
+  background-image: url('../../assets/img/school-background.png');
+  background-size: contain;
+  background-position: center;
+  height: 100vh;
+}

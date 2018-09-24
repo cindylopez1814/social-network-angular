@@ -1,8 +1,16 @@
 <app-home-page></app-home-page>
 
 <nav>
-  <p>Consejo de curso</p>
-</nav>
+    <h4>DIARIO MURAL</h4>
+  </nav>
+  
+  <section>
+    <mat-card>
+  <textarea name="Muro" placeholder="Escribe tu mensaje" id="" cols="30" rows="10"></textarea>
+  <button>PUBLICAR</button>
+    </mat-card>
+  
+  </section>
 
 <mat-card *ngFor="let post of post">
     {{post.post}} - {{post.id}}
@@ -11,7 +19,7 @@
     </div>
     <div (click)="edit(item)">
       <i class="fas fa-marker"></i>
-      <button (clicl)='agregarPostEditado()'> ok </button>
+      <button (click)='agregarPostEditado()'> ok </button>
     </div>
       <i class="fas fa-heartbeat"></i>
 

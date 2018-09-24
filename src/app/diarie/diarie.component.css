@@ -1,21 +1,44 @@
 nav {
   width: 75%;
-  height: 7vh;
+  height: 10vh;
   background-color: #82ccd5;
   z-index: 2;
   position: fixed;
   right: 0px;
   box-shadow: 0px 2px 14px -3px rgba(105, 105, 105, 1);
-  color: white;
   text-align: center;
-  text-emphasis: A;
+  margin-top: -5%;
 }
+
 mat-card{
   background-color: white;
-  z-index: 2;
-  position: absolute;
-  margin-top: 10%;
   width: 55%;
-  height: 30vh;
-  right: 10%;
+  height: 10vh;
+  display: block;
+  margin-left: 32%;
+  margin-top: 5%;
+  padding-top: 5%;
+}
+
+section{
+  background-image: url('../../assets/img/school-background.png');
+  background-size: contain;
+  background-position: center;
+  height: 100vh;
+}
+textarea{
+  background-color: #82ccd5;
+  resize: none;
+  width: 100%;
+  height: 45%;
+}
+button{
+  color: white;
+  border: inherit;
+  width: 30%;
+  height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 2%;
+  background-color: #27a9e1ad;
 }
