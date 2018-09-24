@@ -1,27 +1,26 @@
-# SocialNetworkAngular
+# ConectApp Angular Version
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+ConeptApp es una aplicacion pensada para los estudiantes en la cual se intenta integrar toda la informacion del aula.
 
-## Development server
+# Diario Mural
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Esta sesion esta pensada para que se puedan conectar los estudiantes y tengan un espacio de conversacion en el cual puedan editar y eliminar los post publicados.
 
-## Code scaffolding
+# Actividades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+En "actividades" se cargara la informacion por el docente con el fin de dejar constancia de las actividades recreativas que esten en fechas proximas para el curso.
 
-## Build
+# Consejo de curso
+En el área de "consejo de curso" se vera implementada la informacion del curso, relevante para pruebas, reunion de apoderados y las actualizaciones del  plantel educativo.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Chat 
 
-## Running unit tests
+El área de conexion de Estudiantes y Docentes, el mismo se tiene pensado para implimentar un horario con el fin de no incomodar las horas de sueño de los mismos integrantes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Perfil
 
-## Running end-to-end tests
+Como su nombre bien lo dice es el área donde estará la foto del usuario, su nombre y mail con el cual se registro en la aplicación; Los dos primeros con opcion a cambio.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# LogOut o Cierre de Sesion
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Al presionar este boton la aplicacion se cierra hasta su proxima visita.
