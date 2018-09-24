@@ -1,27 +1,16 @@
-# SocialNetworkAngular
+# Red Social: Conectapp Alumnos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+Esta red social fue creada especialmente para  alumnos y profesores, en donde éstos puedan encontrarse y reunirse, fortaleciendo sus lazos de comunidad dentro del curso. 
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Definición del producto.
 
-## Code scaffolding
+Primero, como grupo, se escogió un tema de la lista de selección para  dividirnos en tríos y hacer un Benchmark  de las posibles apps de competencia Analizamos distintas redes sociales y/o aplicaciones en las que alumnos se puedan comunicar ya se con sus pares o profesores. Gracias a este Benchmark,  se pudo observar sus necesidades.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Los elementos básicos de esta red social son:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Login con Firebase, con las opciones de ingresar con nuevo mail, por medio de Facebook o  Gmail. (En caso de errores,  la app muestra mensaje de error para ayudar al usuario a superar estos errores).
+* Un “Tablero”, donde se puede postear tareas o avisos. (Con las funciones: Like, Editar o Eliminar).
+* Registro de “Actividades”. 
+* Registro de “Consejo de Curso”. 
+* Cerrar sesión.

@@ -56,7 +56,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'home',
-    component: HomePageComponent
+    component: DiarieComponent
   },
   {
     path: 'Perfil',
