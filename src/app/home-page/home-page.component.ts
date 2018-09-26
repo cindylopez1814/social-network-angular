@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
   options: FormGroup;
+  
 
   constructor(private authService: AuthService, private snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) {
     this.options = fb.group({
