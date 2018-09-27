@@ -13,15 +13,12 @@ import { DataService } from '../data.service';
   styleUrls: ['./diarie.component.css']
 })
 export class DiarieComponent implements OnInit {
-  post: any;
-  editPost: any = {
-    message: ''
-  };
+  posts: any;
 
   // tslint:disable-next-line:max-line-length
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private database: AngularFireDatabase, private dataservice: DataService) {
-    this.dataservice.getPost().subscribe(item => {
-      this.post = item;
+    this.dataservice.getPosts().subscribe(item => {
+      this.posts = item;
       console.log(item);
     });
   }
@@ -29,15 +26,24 @@ export class DiarieComponent implements OnInit {
   ngOnInit() {
   }
 
-  remove(item) {
-    this.dataservice.deletePost(item);
+  // iba a usar la funcion directamente en el data service pero al acceder al this. en el dataservice se perdia el "ref", por lo que no podia llamar al .add o .update o cualquier metodo en la collection asi que se hicieron las funciones del post al component.ts y se llaman de manera directa 
+
+  // para usar los objetos en firebase se usa la ref de cada objeto, los collection permiten acceder a cada ref usando el .ref y luego el .doc donde le pasas el id del documento (path), luego de obtener la ruta se puede modificar y se guarda directamente en firebase.
+
+  // por que no necesitas hacer el ref para agregar items al collection? Pues como bien dice, no se manipula un objeto sino el collection el cual ya tiene el subscribe en el componente asi que luego de actualizar los likes o eliminar el post de la misma
+
+  // ref y doc es para cuando manipulamos documentos individuales.
+  
+  count(item){
+    if (item.likes) { // todo post inicia con likes undefined/null/0 si entras aqui ya tenias uno por lo que podemos incrementar sin romper el codigo
+      item.likes ++;
+    } else { // si no tienes nada se asigna el 1
+      item.likes = 1;
+    }
+    this.dataservice.getPostsCollection().ref.doc(item.id).update(item);
   }
 
-  edit(item) {
-  this.editPost = item;
-  }
-
-  agregarPostEditado() {
-    this.dataservice.editPost(this.editPost);
+  remove(item){
+    this.dataservice.getPostsCollection().ref.doc(item.id).delete();
   }
 }
