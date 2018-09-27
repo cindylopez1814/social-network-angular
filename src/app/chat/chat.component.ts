@@ -21,4 +21,7 @@ export class ChatComponent implements OnInit {
   ngOnInit() {
   }
 
+  remove(item){
+    this.dataservice.getChatsCollection().ref.doc(item.id).delete();
+  }
 }

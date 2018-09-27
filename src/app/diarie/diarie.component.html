@@ -3,6 +3,7 @@
   <mat-card>
     <app-imput-post></app-imput-post>
   </mat-card>
+<<<<<<< HEAD
   
   <mat-card *ngFor="let post of post">
     <h4>{{post.name}}</h4> 
@@ -12,5 +13,19 @@
       <!-- <button (click)='agregarPostEditado()'> ok </button> -->
       <i class="fas fa-star"></i>
     </div>  
+=======
+
+  <mat-card *ngFor="let post of posts">
+    <h4>{{post.username}}: </h4>&nbsp;&nbsp;{{post.message}} <br>
+    <div (click)="remove(post)">
+      <i class="fas fa-trash-alt"></i>
+    </div> &nbsp;&nbsp;
+    <div (click)="edit(post)">
+      <i class="fas fa-marker"></i>
+    </div>&nbsp;&nbsp;
+    <div (click)="count(post)">
+    <i id="like" class="fas fa-heartbeat">&nbsp;&nbsp;{{post.likes}}</i>
+  </div>
+>>>>>>> 1f3f21e60576c28d440fca25fc1e553f76c590cf
   </mat-card>
 </section>
