@@ -29,11 +29,10 @@ export class ImputChatComponent implements OnInit {
     const time = new Date().getTime();
     const date = new Date(time).toLocaleString([], {hour: '2-digit', minute: '2-digit'});
     const savedChat = this.chat;
-    savedChat.date = date;
     this.dataService.addChat(savedChat);
     this.chat.msn = '';
     this.chat.username = user.displayName;
-    this.chat.date = '';
+    this.chat.date = date;
       }
     });
   }

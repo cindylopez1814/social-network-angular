@@ -29,15 +29,11 @@ agregar() {
       const time = new Date().getTime();
       const date = new Date(time).toLocaleString([], {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'});
       const savedPost = this.post;
-      savedPost.username = user.displayName; // aca va el usuario
-      savedPost.photo = user.photoURL;
-      savedPost.date = date;
       this.dataService.addPost(savedPost);
       this.post.message = '';
-      this.post.userName = '';
-      this.post.photo = '';
-      this.post.date = '';
-      console.log(date);
+      this.post.username = user.displayName;
+      this.post.photo = user.photoURL;
+      this.post.date = date;
     }
   });
 }

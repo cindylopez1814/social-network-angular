@@ -19,7 +19,6 @@ export class DiarieComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private database: AngularFireDatabase, private dataservice: DataService) {
     this.dataservice.getPosts().subscribe(item => {
       this.posts = item;
-      console.log(item);
     });
   }
 

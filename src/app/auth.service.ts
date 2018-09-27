@@ -80,8 +80,8 @@ export class AuthService {
         const data: User = {
           uid: user.uid,
           email: user.email || null,
-          displayName: user.displayName || 'nameless user',
-          photoURL: user.photoURL || 'https://goo.gl/Fz9nrQ'
+          displayName: user.displayName || user.email,
+          photoURL: user.photoURL || 'https://via.placeholder.com/350x150'
       };
       return this.afs.collection(`users`).doc(`${user.uid}`).set(data);
     }
