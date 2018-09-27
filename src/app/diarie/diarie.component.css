@@ -18,22 +18,9 @@ button{
   border-radius: 2%;
   background-color: #27a9e1ad;
 }
-<<<<<<< HEAD
-
-div {
-  display: inline;
-}
-
-i {
-  color: #82ccd5;
-  font-size: 18px;
-  justify-content: space-between;
-  margin-right: 2%;
-=======
 div{
   display: inline-block;
 }
 h4{
   display: inline;
->>>>>>> 1f3f21e60576c28d440fca25fc1e553f76c590cf
 }
