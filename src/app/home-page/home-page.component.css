@@ -31,16 +31,10 @@ img{
   flex: 1 1 auto;
 }
 
-.container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 mat-sidenav {
-  width: 250px;
+  width: 40vh;
+  position: fixed;
+  background-color: #ffff;
 }
 
 .circle {
