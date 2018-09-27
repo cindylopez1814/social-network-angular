@@ -71,6 +71,9 @@ export class DataService {
   getPostsCollection() {
     return this.postCollection;
   }
+  getChatsCollection() {
+    return this.chatCollection;
+  }
 }
 
 
