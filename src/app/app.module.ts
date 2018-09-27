@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatExpansionModule, MatListModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // componentes creados
 import { AppComponent } from './app.component';
@@ -102,13 +105,33 @@ const appRoutes: Routes = [
     FormsModule,
     MatSnackBarModule,
     MatSidenavModule,
-    MatIconModule,
     AngularFireDatabaseModule,
     MatCardModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireFunctionsModule,
     AngularFireMessagingModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSidenavModule,
+    FlexLayoutModule,
+    MatExpansionModule,
+    MatListModule,
+  ],
+
+  exports: [
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSidenavModule,
+    FlexLayoutModule,
+    MatExpansionModule,
+    MatListModule
   ],
   providers: [AuthService, DataService],
   bootstrap: [AppComponent]

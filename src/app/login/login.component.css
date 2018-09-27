@@ -1,7 +1,8 @@
 section{
   background-color: #fafafa;
   height: 100vh;
-  text-align: center
+  text-align: center;
+  background-image: none;
 }
 
 img{
