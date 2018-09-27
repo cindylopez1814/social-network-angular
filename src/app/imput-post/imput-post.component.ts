@@ -27,7 +27,7 @@ agregar() {
   this.afAuth.authState.subscribe(user => {
     if (user) {
       const time = new Date().getTime();
-      const date = new Date(time).toLocaleString([], {hour: '2-digit', minute: '2-digit'});
+      const date = new Date(time).toLocaleString([], {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'});
       const savedPost = this.post;
       savedPost.username = user.displayName; // aca va el usuario
       savedPost.photo = user.photoURL;

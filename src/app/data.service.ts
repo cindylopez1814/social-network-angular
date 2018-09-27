@@ -12,6 +12,7 @@ export interface Post {
   username: string;
   id: any;
   date: string;
+  photo: any;
 }
 
 export interface Chat {
@@ -34,7 +35,7 @@ export class DataService {
   private chatDoc: AngularFirestoreDocument<Chat>;
 
   constructor(private afs: AngularFirestore, public afAuth: AngularFireAuth, private database: AngularFireDatabase) {
-    this.postCollection = afs.collection<Post>('posts');
+    this.postCollection = afs.collection<Post>('post', ref => ref.orderBy('date', 'desc'));
     this.posts$ = this.postCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as Post;
