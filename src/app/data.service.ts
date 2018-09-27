@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { AngularFireAuth} from '@angular/fire/auth';
 import { map } from 'rxjs/operators';
 import { post } from 'selenium-webdriver/http';
 
@@ -10,10 +11,13 @@ export interface Post {
   likes: number;
   username: string;
   id: any;
+  date: string;
 }
 
 export interface Chat {
   msm: string;
+  users: string;
+  date: string;
 }
 
 @Injectable({
@@ -29,7 +33,7 @@ export class DataService {
   chat$: Observable<Chat[]>;
   private chatDoc: AngularFirestoreDocument<Chat>;
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore, public afAuth: AngularFireAuth, private database: AngularFireDatabase) {
     this.postCollection = afs.collection<Post>('posts');
     this.posts$ = this.postCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
@@ -47,6 +51,13 @@ export class DataService {
         return {id, ...dataChat};
       }))
     );
+
+    this.afAuth.authState.subscribe(user => {
+      if (user) {
+      console.log(user.displayName);
+      }
+
+    });
   }
 
   getPosts() {

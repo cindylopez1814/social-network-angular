@@ -10,6 +10,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./imput-post.component.css']
 })
 export class ImputPostComponent implements OnInit {
+  user: any;
   post: any = {
     message: ''
   };
@@ -26,4 +27,17 @@ export class ImputPostComponent implements OnInit {
     this.dataService.addPost(savedPost);
     this.post.message = '';
   }
+    // this.afAuth.authState.subscribe(user => {
+    //   if(user) 
+    //     this.messageList$.push({ 
+    //       nombre: user.displayName,
+    //       likes:0,         
+    //     })       
+    //   console.log(user.displayName); 
+    //   let time = new Date().getTime();
+    //     let date = new Date(time).toLocaleString();
+    //     let users = user.displayName;                
+    //     this.item.date = date;
+    //     this.item.users = users;
+    // });
 }

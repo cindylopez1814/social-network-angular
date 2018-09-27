@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { ProfileComponent } from './profile/profile.component';
 import { WallComponent } from './wall/wall.component';
 import { ChatComponent } from './chat/chat.component';
 import { ActiveComponent } from './active/active.component';
@@ -62,10 +61,6 @@ const appRoutes: Routes = [
     component: DiarieComponent
   },
   {
-    path: 'Perfil',
-    component: ProfileComponent
-  },
-  {
     path: 'Actividades',
     component: ActiveComponent
   },
@@ -85,7 +80,6 @@ const appRoutes: Routes = [
     RegisterComponent,
     LoginComponent,
     HomePageComponent,
-    ProfileComponent,
     WallComponent,
     ChatComponent,
     ActiveComponent,

@@ -29,3 +29,12 @@ i {
   justify-content: space-between;
   margin-right: 2%;
 }
+
+@media(max-width: 750px){
+  mat-card{
+    width: 70%;
+    display: block;
+    margin: 10%;
+    padding-top: 5%;
+  }
+}
