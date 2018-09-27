@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validator, Validators, EmailValidator} from '@angular/forms';
+import { FormBuilder, FormGroup, Validator, Validators} from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
 import { DataService } from '../data.service';
-import { userInfo } from 'os';
 
 @Component({
   selector: 'app-imput-post',
@@ -21,9 +20,9 @@ export class ImputPostComponent implements OnInit {
   ngOnInit() {}
 
   agregar() {
-    //let userName = this.authService.signUp.email;
+    // let userName = this.
     let savedPost = this.post;
-    savedPost.username = 'userName'; // aca va el mail del login
+    savedPost.username = 'userName'; // aca va el usuario
     this.dataService.addPost(savedPost);
     this.post.message = '';
   }
