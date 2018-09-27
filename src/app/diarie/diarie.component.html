@@ -8,17 +8,36 @@
     <h4>{{post.username}}:</h4>
     <p>{{post.date}}</p>
     <div>
-      <img src="{{post.photo}}" alt="foto">
-      {{post.message}}
+      <img src="{{post.photo}}" alt="foto"> {{post.message}}
     </div>
     <div (click)="remove(post)">
       <i class="fas fa-trash-alt"></i>
     </div> &nbsp;&nbsp;
-    <div (click)="edit(post)">
-      <i class="fas fa-marker"></i>
+    <div>
+      <button type="button" data-toggle="modal" data-target="#edit">
+        <i class="fas fa-marker"></i>
+      </button>
+      <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">  
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+              <form>
+                <textarea type="text" placeholder="{{post.message}}"></textarea>
+               </form> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal">Cancelar</button>
+              <button type="submit" (click)="edit(post)" data-dismiss="modal">Editar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>&nbsp;&nbsp;
     <div (click)="count(post)">
-    <i id="like" class="fas fa-start">&nbsp;&nbsp;{{post.likes}}</i>
-  </div>
+      <i id="like" class="fas fa-star">&nbsp;&nbsp;{{post.likes}}</i>
+    </div>
   </mat-card>
 </section>

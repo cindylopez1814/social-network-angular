@@ -16,8 +16,8 @@ export interface Post {
 }
 
 export interface Chat {
-  msm: string;
-  users: string;
+  msn: string;
+  username: string;
   date: string;
 }
 
@@ -44,7 +44,7 @@ export class DataService {
       }))
     );
 
-    this.chatCollection = afs.collection<Chat>('chat');
+    this.chatCollection = afs.collection<Chat>('chat', ref => ref.orderBy('date'));
     this.chat$ = this.chatCollection.snapshotChanges().pipe(
       map(index => index.map(i => {
         const dataChat = i.payload.doc.data() as Chat;

@@ -9,7 +9,6 @@ interface User {
   email: string;
   photoURL?: string;
   displayName?: string;
-  age?: number;
 }
 
 @Injectable({
