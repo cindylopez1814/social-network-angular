@@ -51,13 +51,6 @@ export class DataService {
         return {id, ...dataChat};
       }))
     );
-
-    this.afAuth.authState.subscribe(user => {
-      if (user) {
-      console.log(user.displayName);
-      }
-
-    });
   }
 
   getPosts() {

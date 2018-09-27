@@ -5,7 +5,12 @@
   </mat-card>
 
   <mat-card *ngFor="let post of posts">
-    <h4>{{post.username}}: </h4>&nbsp;&nbsp;{{post.message}} <br>
+    <h4>{{post.username}}:</h4>
+    <p>{{post.date}}</p>
+    <div>
+      <img src="{{post.photo}}" alt="foto">
+      {{post.message}}
+    </div>
     <div (click)="remove(post)">
       <i class="fas fa-trash-alt"></i>
     </div> &nbsp;&nbsp;
@@ -13,7 +18,7 @@
       <i class="fas fa-marker"></i>
     </div>&nbsp;&nbsp;
     <div (click)="count(post)">
-    <i id="like" class="fas fa-heartbeat">&nbsp;&nbsp;{{post.likes}}</i>
+    <i id="like" class="fas fa-start">&nbsp;&nbsp;{{post.likes}}</i>
   </div>
   </mat-card>
 </section>
