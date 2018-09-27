@@ -6,13 +6,13 @@
   <div class="container">  
     <div class="top_menu">
         <div class="avatar-pic"></div>
-        <div class="title">Usuaio</div>
+        <div class="title">Usuario</div>
     </div>
     <!-- Contenedor Mensajes -->
     <div class="messagesContainer">
         <div class="message-data">Usuario</div>
         <div class="message" *ngFor="let chat of chat">
-            {{chat.msn}}
+            {{chat.msn}}&nbsp;&nbsp;&nbsp; <i class="fas fa-trash-alt" (click)='remove(chat)'></i>
         </div>
     </div>
     <!-- Area de envio -->

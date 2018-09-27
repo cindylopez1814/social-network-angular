@@ -7,6 +7,9 @@ import { post } from 'selenium-webdriver/http';
 
 export interface Post {
   message: string;
+  likes: number;
+  username: string;
+  id: any;
 }
 
 export interface Chat {
@@ -19,7 +22,7 @@ export interface Chat {
 
 export class DataService {
   private postCollection: AngularFirestoreCollection<Post>;
-  post$: Observable<Post[]>;
+  posts$: Observable<Post[]>;
   private postDoc: AngularFirestoreDocument<Post>;
 
   private chatCollection: AngularFirestoreCollection<Chat>;
@@ -27,8 +30,8 @@ export class DataService {
   private chatDoc: AngularFirestoreDocument<Chat>;
 
   constructor(private afs: AngularFirestore) {
-    this.postCollection = afs.collection<Post>('post');
-    this.post$ = this.postCollection.snapshotChanges().pipe(
+    this.postCollection = afs.collection<Post>('posts');
+    this.posts$ = this.postCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as Post;
         const id = a.payload.doc.id;
@@ -46,30 +49,30 @@ export class DataService {
     );
   }
 
-  getPost() {
-    return this.post$;
+  getPosts() {
+    return this.posts$;
   }
 
   addPost(item: Post) {
     this.postCollection.add(item);
   }
-
-  deletePost(item) {
-    this.postDoc = this.afs.doc<Post>(`post/${item.id}`);
-    this.postDoc.delete();
-  }
-
-  editPost(item) {
-    this.postDoc = this.afs.doc<Post>(`post/${item.id}`);
-    this.postDoc.update(item);
-  }
-
   getChat() {
     return this.chat$;
   }
 
   addChat(item: Chat) {
     this.chatCollection.add(item);
+  }
+
+  // la propiedad se mantiene privada y la unica manera de acceder a ella es con este metodo
+  // tal cual como se obtiene el chat y el posts
+  // Por que necesito acceder desde fuera a esta collection? pues con este collection voy a usar
+  // las referencias a los documenstos que me permites actualizar y eliminarlos
+  getPostsCollection() {
+    return this.postCollection;
+  }
+  getChatsCollection() {
+    return this.chatCollection;
   }
 }
 

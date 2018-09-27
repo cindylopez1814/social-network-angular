@@ -35,3 +35,9 @@ button{
   border-radius: 2%;
   background-color: #27a9e1ad;
 }
+div{
+  display: inline-block;
+}
+h4{
+  display: inline;
+}
