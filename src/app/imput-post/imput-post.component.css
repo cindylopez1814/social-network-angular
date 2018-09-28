@@ -5,6 +5,7 @@ textarea{
   height: 15vh;
   opacity: 0.8;
   font-weight: 500;
+  overflow: hidden;
 }
 button{
   color: white;

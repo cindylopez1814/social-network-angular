@@ -1,13 +1,12 @@
-<h5 >Bienvenido, Registrate en ConectApp</h5>
-
 <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+  <h5> Bienvenido <br> Registrate en ConectApp</h5>
   <div>
-  <label> Correo Electronico </label>
-  <input formControlName="emailRegister" type="email" placeholder="Email" />
-  <br>
-  <label for="login-pass" class="form-label"> Contraseña </label>
-  <input formControlName="pass" type="password" placeholder="Contraseña" />
-</div>
+    <label> Correo Electronico </label>
+    <input formControlName="emailRegister" type="email" placeholder="Email" />
+    <br>
+    <label for="login-pass" class="form-label"> Contraseña </label>
+    <input formControlName="pass" type="password" placeholder="Contraseña" />
+  </div>
   <br>
   <br>
   <button type="submit"> REGISTRARME </button>

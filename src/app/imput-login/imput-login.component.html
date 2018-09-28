@@ -1,5 +1,5 @@
 <form [formGroup]="authForm" *ngIf="!(authService.user | async)">
-  <section>
+  <section class="container-fluid">
     <input type="email" placeholder=" Email" formControlName="email">
     <span>
       <i class="far fa-envelope"></i>
@@ -10,13 +10,13 @@
       <i class="fas fa-lock"></i>
     </span>
   </section>
-  <section>
+  <section class="container-fluid">
     <button type="button" (click)="onLogin()" class="startSesion">
     Iniciar Sesión
       <i class="fas fa-angle-double-right"></i>
     </button>
   </section>
-  <section>
+  <section class="container-fluid">
     <p>¿Aún no estás registrado?</p>
     <button routerLink="/registro" type="button" class="registerButton">
       REGÍSTRATE

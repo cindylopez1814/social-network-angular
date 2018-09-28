@@ -7,26 +7,22 @@
   <mat-card *ngFor="let post of posts">
     <h4>{{post.username}}:</h4>
     <div class="message">
-      <img src="{{post.photo}}" alt="foto"> 
+      <img src="{{post.photo}}" alt="foto">
       <p>{{post.message}}</p>
-    </div>  
-    <div (click)="remove(post)">
+    </div>
+    <p class="date">{{post.date}}</p>
+    <div (click)="remove(post)" class="icon">
       <i class="fas fa-trash-alt"></i>
-    </div> &nbsp;&nbsp;
-    <div>
-      <button type="button" data-toggle="modal" data-target="#edit">
-        <i class="fas fa-marker"></i>
-      </button>
+    </div>
+    <div class="icon">
+      <i class="fas fa-marker" data-toggle="modal" data-target="#edit"></i>
       <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">  
-              <span aria-hidden="true">&times;</span>
-            </button>
             <div class="modal-body">
               <form>
                 <textarea type="text" placeholder="{{post.message}}"></textarea>
-               </form> 
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" data-dismiss="modal">Cancelar</button>
@@ -35,10 +31,9 @@
           </div>
         </div>
       </div>
-    </div>&nbsp;&nbsp;
-    <div (click)="count(post)">
-      <i id="like" class="fas fa-star">&nbsp;&nbsp;{{post.likes}}</i>
     </div>
-    <p>{{post.date}}</p>
+    <div (click)="count(post)" class="icon">
+      <i id="like" class="fas fa-star">{{post.likes}}</i>
+    </div>
   </mat-card>
 </section>

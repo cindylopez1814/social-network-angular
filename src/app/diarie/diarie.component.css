@@ -11,12 +11,20 @@ mat-card{
 button{
   color: white;
   border: inherit;
-  width: 15%;
+  width: 30%;
   height: 30px;
   display: inline-block;
   margin-left: 2%;
   border-radius: 2%;
   background-color: #27a9e1ad;
+}
+
+button:hover {
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.modal-footer{
+  text-align: center;
 }
 
 i {
@@ -33,7 +41,7 @@ textarea{
 }
 
 img{
-  height: 8vh;
+  height: 13vh;
   width: auto;
 }
 
@@ -45,6 +53,26 @@ img{
 
 .message p{
   display: inline;
+  margin-left: 2%;
+}
+
+.icon{
+  display: inline;
+  float: right;
+  margin: 1% 1%;
+  
+}
+
+.date {
+  display: inline;
+  font-size: 18px;
+}
+.icon i{
+  font-size: 18px;
+}
+
+i:hover {
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
 }
 
 @media(max-width: 750px){

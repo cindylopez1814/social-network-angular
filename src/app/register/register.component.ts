@@ -14,7 +14,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private snackBar: MatSnackBar, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private router: Router) {
     this.createRegisterForm();
    }
 
@@ -33,10 +33,8 @@ export class RegisterComponent implements OnInit {
       this.router.navigate(['/home']);
     })
     .catch(() => {
-      this.snackBar.open('Error en tu Registro, ¡Intentemoslo otra vez!'
-      , null
-      , {
-        duration: 4000
+      this.snackBar.open('Error en tu Registro, ¡Intentemoslo otra vez!', null , {
+        duration: 3000,
       });
     });
   }

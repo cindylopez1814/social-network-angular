@@ -1,4 +1,5 @@
 <form (ngSubmit)="agregar()">
-  <textarea type="text" placeholder="Escribe tu mensaje" name="message" [(ngModel)]="post.message"></textarea>
+  <textarea type="text" class="form-control" id="post" placeholder="Escribe tu mensaje" [(ngModel)]="post.message" name="post" required minlength="1" #post='ngModel'></textarea>
+  <!-- <button type="submit" [disabled]="!validateForm.valid">Publicar</button> -->
   <button type="submit">Publicar</button>
 </form>

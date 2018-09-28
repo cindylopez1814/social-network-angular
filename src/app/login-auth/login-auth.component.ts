@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginAuthComponent implements OnInit {
 
-  constructor(public authService: AuthService, private snackBar: MatSnackBar, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(public authService: AuthService, public snackBar: MatSnackBar, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
   }
@@ -25,7 +25,7 @@ export class LoginAuthComponent implements OnInit {
       this.snackBar.open('Error ¡Intentemoslo otra vez!'
       , null
       , {
-        duration: 4000
+        duration: 3000
       });
     });
   }
@@ -39,7 +39,7 @@ export class LoginAuthComponent implements OnInit {
     this.snackBar.open('Error ¡Intentemoslo otra vez!'
     , null
     , {
-      duration: 4000
+      duration: 3000
     });
    });
  }

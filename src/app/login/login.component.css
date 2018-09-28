@@ -12,6 +12,17 @@ img{
 }
 
 hr{
-  width: 600px;
+  width: 45%;
   color: #8a8888;
+}
+
+@media(max-width: 750px){
+  img {
+    margin-top: 10%;
+    width: 50%;
+  }
+
+  hr {
+    width: 70%;
+  }
 }
