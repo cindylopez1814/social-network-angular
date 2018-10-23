@@ -2,6 +2,9 @@
 
 Esta red social fue creada especialmente para  alumnos y profesores, en donde éstos puedan encontrarse y reunirse, fortaleciendo sus lazos de comunidad dentro del curso. 
 
+[Demo](https://redframework-1e62f.firebaseapp.com/)
+
+![chrome_2018-10-22_21-48-26](https://user-images.githubusercontent.com/39093869/47327574-3596de00-d644-11e8-9e4b-1248b908a4f2.png)
 
 ## Definición del producto.
 
